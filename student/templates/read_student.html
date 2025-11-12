@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        td{
+            text-align: center;
+            border: 1px solid;
+        }
+        th{
+            text-align: center;
+            border: 1px solid;
+        }
+    </style>
+    
+    <h2 style="text-align: center;">Student Data</h2>
+
+    <table style="width: 70%; border-collapse: collapse; margin: auto; background-color: beige;">
+        <th>Name</th>
+        <th>Roll_no</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Marks</th>
+
+        {% for student in data %}
+        <tr style="text-align: center;">
+            <td>{{student.name}}</td>
+            <td>{{student.roll_no}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.marks}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    
+</body>
+</html>
